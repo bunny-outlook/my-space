@@ -1,5 +1,5 @@
 {
-    "Monday to Friday": [
+    "Monday": [
         "23:00 - 05:00 -> Sleep",
         "05:00 - 05:30 -> Wake up, freshen up, make bed",
         "05:30 - 07:00 -> Walk / Jog",
@@ -8,7 +8,55 @@
         "09:30 - 17:00 -> Work",
         "17:00 - 20:00 -> Commute back home",
         "20:00 - 21:00 -> Dinner",
-        "21:00 - 22:00 -> Learn office based skills",
+        "21:00 - 22:00 -> Cloud and AI/ML",
+        "22:00 - 23:00 -> Netflix / Hotstar"
+    ],
+    "Tuesday": [
+        "23:00 - 05:00 -> Sleep",
+        "05:00 - 05:30 -> Wake up, freshen up, make bed",
+        "05:30 - 07:00 -> Walk / Jog",
+        "07:00 - 07:35 -> Breakfast and prep for work",
+        "07:35 - 09:30 -> Reach office / Work prep",
+        "09:30 - 17:00 -> Work",
+        "17:00 - 20:00 -> Commute back home",
+        "20:00 - 21:00 -> Dinner",
+        "21:00 - 22:00 -> Frontend / Backend",
+        "22:00 - 23:00 -> Netflix / Hotstar"
+    ],
+    "Wednesday": [
+        "23:00 - 05:00 -> Sleep",
+        "05:00 - 05:30 -> Wake up, freshen up, make bed",
+        "05:30 - 07:00 -> Walk / Jog",
+        "07:00 - 07:35 -> Breakfast and prep for work",
+        "07:35 - 09:30 -> Reach office / Work prep",
+        "09:30 - 17:00 -> Work",
+        "17:00 - 20:00 -> Commute back home",
+        "20:00 - 21:00 -> Codechef / Codeforces contest",
+        "21:00 - 22:00 -> Dinner",
+        "22:00 - 23:00 -> Netflix / Hotstar"
+    ],
+    "Thursday": [
+        "23:00 - 05:00 -> Sleep",
+        "05:00 - 05:30 -> Wake up, freshen up, make bed",
+        "05:30 - 07:00 -> Walk / Jog",
+        "07:00 - 07:35 -> Breakfast and prep for work",
+        "07:35 - 09:30 -> Reach office / Work prep",
+        "09:30 - 17:00 -> Work",
+        "17:00 - 20:00 -> Commute back home",
+        "20:00 - 21:00 -> Dinner",
+        "21:00 - 22:00 -> Cybersecurity",
+        "22:00 - 23:00 -> Netflix / Hotstar"
+    ],
+    "Friday": [
+        "23:00 - 05:00 -> Sleep",
+        "05:00 - 05:30 -> Wake up, freshen up, make bed",
+        "05:30 - 07:00 -> Walk / Jog",
+        "07:00 - 07:35 -> Breakfast and prep for work",
+        "07:35 - 09:30 -> Reach office / Work prep",
+        "09:30 - 17:00 -> Work",
+        "17:00 - 20:00 -> Commute back home",
+        "20:00 - 21:00 -> Dinner",
+        "21:00 - 22:00 -> Databases",
         "22:00 - 23:00 -> Netflix / Hotstar"
     ],
     "Saturday": [

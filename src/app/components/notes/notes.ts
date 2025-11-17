@@ -68,6 +68,13 @@ export class Notes implements OnInit {
 
   saveNotes() {
     localStorage.setItem('notes', JSON.stringify(this.notes));
+    const today = new Date();
+
+    if (today.getDate() === 1) {
+      localStorage.setItem('isToBeDeleted', JSON.stringify(false));
+    } else {
+      localStorage.setItem('isToBeDeleted', JSON.stringify(true));
+    }
   }
 
   loadNotes() {
@@ -80,7 +87,7 @@ export class Notes implements OnInit {
   // ✅ New: Reset notes if it's the 1st day of the month
   resetNotesIfFirstDay() {
     const today = new Date();
-    if (today.getDate() === 1) {
+    if (today.getDate() === 1 && JSON.parse(localStorage.getItem('isToBeDeleted')!)) {
       localStorage.setItem('notes', JSON.stringify([]));
     }
   }
