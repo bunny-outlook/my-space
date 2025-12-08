@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['instructions.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Instructions implements OnInit {
+export class RulesAndTargets implements OnInit {
   jsonData = signal<{ [key: string]: string[] } | null>(null);
   loading = signal<boolean>(true);
   error = signal<string | null>(null);

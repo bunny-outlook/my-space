@@ -1,4 +1,10 @@
 {
+    "Targets": [
+        "Google ready by the end of year 2026",
+        "Be an expert in my current professional working area (.NET, Node, Angular, SQL)",
+        "Atleast 50% completion of the CTF platform project",
+        "Beginner level cybersecurity knowledge. Should be able to solve easy CTF without any difficulties"
+    ],
     "Rules": [
         "Schedule for all days should be followed strictly (no excuses allowed)",
         "Mobile screen time should be minimum, should include productive tasks only",
