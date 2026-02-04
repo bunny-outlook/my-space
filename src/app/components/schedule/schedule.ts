@@ -14,6 +14,7 @@ export class Schedule implements OnInit {
   jsonData = signal<{ [key: string]: string[] } | null>(null);
   loading = signal<boolean>(true);
   error = signal<string | null>(null);
+  daysRemaining: string = '';
 
   objectKeys = Object.keys;
 
@@ -35,6 +36,19 @@ export class Schedule implements OnInit {
 
   ngOnInit() {
     this.fetchData();
+    this.setDaysRemaining(new Date('2066-12-31'));
+  }
+
+  setDaysRemaining(targetDate: Date): void {
+    const today = new Date();
+
+    today.setHours(0, 0, 0, 0);
+    targetDate.setHours(0, 0, 0, 0);
+
+    const diffInMs = targetDate.getTime() - today.getTime();
+    const diffInDays = Math.max(0, Math.ceil(diffInMs / (1000 * 60 * 60 * 24)));
+
+    this.daysRemaining = diffInDays.toString();
   }
 
   async fetchData() {

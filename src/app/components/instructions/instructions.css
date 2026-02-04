@@ -1,6 +1,0 @@
-/* Gradient text effect for headings */
-.text-gradient {
-    background: linear-gradient(90deg, #0dcaf0, #20c997);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
