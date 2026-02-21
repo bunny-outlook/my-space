@@ -71,7 +71,7 @@ export class Day implements OnInit {
     },
     {
       title: 'Weekdays (Night Shift)',
-      storageKey: 'daily_night_shift',
+      storageKey: 'weekdays_night_shift',
       baseSchedule: [
         '03:30 - 09:30',
         '09:30 - 10:30',
