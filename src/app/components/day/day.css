@@ -1,0 +1,113 @@
+.note-text {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    color: white;
+}
+
+/* (Keep your gradient text rule as before) */
+.text-gradient {
+    background: linear-gradient(90deg, #0dcaf0, #20c997);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* ===== Neon Input Rows ===== */
+
+.neon-row {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(13, 202, 240, 0.2);
+    transition: all 0.3s ease;
+}
+
+.neon-row:hover {
+    border-color: #0dcaf0;
+    box-shadow: 0 0 15px rgba(13, 202, 240, 0.25);
+    transform: translateY(-2px);
+}
+
+
+/* ===== Neon Input ===== */
+
+.neon-input {
+    background: #0f1117;
+    border: 1px solid rgba(13, 202, 240, 0.3);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.neon-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.neon-input:focus {
+    background: #0f1117;
+    color: #ffffff;
+    border-color: #20c997;
+    box-shadow: 0 0 10px rgba(32, 201, 151, 0.5);
+    outline: none;
+}
+
+
+/* ===== Neon Button ===== */
+
+.neon-btn {
+    background: transparent;
+    border: 1px solid #20c997;
+    color: #20c997;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.neon-btn:hover {
+    background: linear-gradient(90deg, #0dcaf0, #20c997);
+    color: #000;
+    box-shadow: 0 0 12px rgba(32, 201, 151, 0.6);
+}
+
+
+/* ===== Section Header Glow ===== */
+
+h3.text-info {
+    text-shadow: 0 0 10px rgba(13, 202, 240, 0.6);
+}
+
+.neon-panel {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(13,202,240,0.15);
+    box-shadow: 0 0 25px rgba(13,202,240,0.15);
+}
+
+.neon-input {
+    height: 34px;              /* default is ~38–40 */
+    padding: 4px 10px;
+    font-size: 0.9rem;
+}
+
+.neon-btn {
+    height: 34px;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+}
+
+/* Clear Button */
+
+.neon-clear-btn {
+    background: transparent;
+    border: 1px solid #ff4d6d;
+    color: #ff4d6d;
+    transition: all 0.3s ease;
+}
+
+.neon-clear-btn:hover:not(:disabled) {
+    background: #ff4d6d;
+    color: #000;
+    box-shadow: 0 0 10px rgba(255, 77, 109, 0.6);
+}
+
+.neon-clear-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}

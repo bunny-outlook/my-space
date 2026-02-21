@@ -30,8 +30,8 @@ export class Schedule implements OnInit {
     this.router.navigate(['/notes']);
   }
 
-  goToInstructions() {
-    this.router.navigate(['/rules-and-targets']);
+  goToDay() {
+    this.router.navigate(['/day']);
   }
 
   ngOnInit() {

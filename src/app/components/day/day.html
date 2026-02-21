@@ -1,0 +1,55 @@
+<div class="container-fluid min-vh-100 d-flex flex-column bg-dark text-light py-5">
+
+    <!-- Back Button -->
+    <div class="text-center mb-4">
+        <button class="btn btn-outline-info fw-bold" (click)="goHome()">
+            <i class="bi bi-house-door-fill me-2"></i> Back to Home
+        </button>
+    </div>
+
+    <main class="flex-grow-1">
+
+        <!-- Loop All Sections -->
+        <section *ngFor="let section of sections" class="container mb-5 neon-panel p-4 rounded">
+
+            <h3 class="text-info mb-4">
+                {{ section.title }}
+            </h3>
+
+            <!-- Rows -->
+            <div *ngFor="let item of section.data; let i = index"
+                class="row align-items-center mb-2 neon-row px-3 py-2 rounded">
+
+                <!-- Key -->
+                <div class="col-md-4 fw-bold text-info">
+                    {{ item.key }} :
+                </div>
+
+                <!-- Input -->
+                <div class="col-md-4">
+                    <input type="text" class="form-control neon-input" [(ngModel)]="item.value"
+                        placeholder="Enter value" />
+                </div>
+
+                <!-- Buttons -->
+                <div class="col-md-2 d-flex gap-2">
+
+                    <!-- Update -->
+                    <button class="btn neon-btn flex-fill" (click)="saveSection(section)">
+                        Update
+                    </button>
+
+                    <!-- Clear -->
+                    <button class="btn neon-clear-btn flex-fill" type="button" (click)="clearItem(section, i)"
+                        [disabled]="!item.value">
+                        <!-- <i class="bi bi-x-circle"></i> -->
+                         Clear
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</div>
