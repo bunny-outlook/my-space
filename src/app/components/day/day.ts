@@ -73,16 +73,15 @@ export class Day implements OnInit {
       title: 'Weekdays (Night Shift)',
       storageKey: 'weekdays_night_shift',
       baseSchedule: [
-        '03:30 - 09:30',
-        '09:30 - 10:30',
-        '10:30 - 11:00',
+        '09:30 - 10:00',
+        '10:00 - 11:00',
         '11:00 - 14:00',
         '14:00 - 15:00',
         '15:00 - 16:00',
         '16:00 - 19:00',
-        '19:00 - 20:00',
-        '20:00 - 03:00',
-        '03:00 - 03:30'
+        '19:00 - 21:00',
+        '21:00 - 04:00',
+        '04:00 - 09:30'
       ],
       data: []
     },
@@ -90,16 +89,16 @@ export class Day implements OnInit {
       title: 'Weekends (Night Shift)',
       storageKey: 'weekend_night_shift',
       baseSchedule: [
-        '03:30 - 09:30',
-        '09:30 - 10:30',
-        '10:30 - 11:00',
+        '04:00 - 09:30',
+        '09:30 - 10:00',
+        '10:00 - 11:00',
         '11:00 - 14:00',
         '14:00 - 15:00',
         '15:00 - 16:00',
         '16:00 - 19:00',
         '19:00 - 20:00',
         '20:00 - 03:00',
-        '03:00 - 03:30'
+        '03:00 - 04:00'
       ],
       data: []
     }
@@ -116,15 +115,27 @@ export class Day implements OnInit {
 
   // Reset every day
   checkDailyReset() {
-    const today = new Date().toISOString().split('T')[0];
-    const storedDate = localStorage.getItem(this.dateKey);
+    const now = new Date();
 
-    if (storedDate !== today) {
-      this.sections.forEach(s => {
-        localStorage.removeItem(s.storageKey);
+    // Get LOCAL midnight timestamp for today
+    const todayMidnight = new Date(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate()
+    ).getTime();
+
+    const lastReset = Number(localStorage.getItem(this.dateKey) || 0);
+
+    // If we have never reset OR last reset was before today’s midnight
+    if (lastReset < todayMidnight) {
+
+      // Clear all sections
+      this.sections.forEach(section => {
+        localStorage.removeItem(section.storageKey);
       });
 
-      localStorage.setItem(this.dateKey, today);
+      // Save today's midnight as last reset time
+      localStorage.setItem(this.dateKey, String(todayMidnight));
     }
   }
 

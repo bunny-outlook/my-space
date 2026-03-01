@@ -1,0 +1,7 @@
+"Days and Learnings": [
+    "Monday : Artificial Intelligence / Machine Learning",
+    "Tuesday : Cybersecurity",
+    "Wednesday : Databases",
+    "Thursday : System Design",
+    "Friday : Cloud Computing"
+]
