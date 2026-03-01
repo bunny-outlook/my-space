@@ -26,35 +26,27 @@
         "22:00 - 23:00 : Spiritual Time",
         "23:00 - 05:00 : Sleep"
     ],
-    "Night Shift, Mon - Fri": [
-        "03:30 - 09:30 : Sleep",
-        "09:30 - 10:30 : Breakfast and get ready",
-        "10:30 - 11:00 : Chill and relax",
+    "Night Shift, Tue - Sat": [
+        "04:00 - 09:30 : Sleep",
+        "09:30 - 10:00 : Freshen Up",
+        "10:00 - 11:00 : Breakfast, Chill and relax",
+        "11:00 - 14:00 : DSA / Take U Forward",
+        "14:00 - 15:00 : Lunch",
+        "15:00 - 16:00 : Netflix / Hotstar",
+        "16:00 - 19:00 : [Redacted]",
+        "19:00 - 21:00 : Dinner & Spiritual Time",
+        "21:00 - 04:00 : Work"
+    ],
+    "Night Shift, Sun & Mon": [
+        "04:00 - 09:30 : Sleep",
+        "09:30 - 10:00 : Breakfast and get ready",
+        "10:00 - 11:00 : Breakfast, Chill and relax",
         "11:00 - 14:00 : DSA / Take U Forward",
         "14:00 - 15:00 : Lunch",
         "15:00 - 16:00 : Netflix / Hotstar",
         "16:00 - 19:00 : [Redacted]",
         "19:00 - 20:00 : Dinner",
-        "20:00 - 03:00 : Work",
-        "03:00 - 03:30 : Spiritual Time"
-    ],
-    "Night Shift, Sat & Sun": [
-        "03:30 - 09:30 : Sleep",
-        "09:30 - 10:30 : Breakfast and get ready",
-        "10:30 - 11:00 : Chill and relax",
-        "11:00 - 14:00 : DSA / Take U Forward",
-        "14:00 - 15:00 : Lunch",
-        "15:00 - 16:00 : Netflix / Hotstar",
-        "16:00 - 19:00 : Project",
-        "19:00 - 20:00 : Dinner",
-        "20:00 - 03:00 : Project",
-        "03:00 - 03:30 : Spiritual Time"
-    ],
-    "Days and Learnings": [
-        "Monday : Artificial Intelligence / Machine Learning",
-        "Tuesday : Cybersecurity",
-        "Wednesday : Databases",
-        "Thursday : System Design",
-        "Friday : Cloud Computing"
+        "20:00 - 03:00 : [Redacted]",
+        "03:00 - 04:00 : Spiritual Time"
     ]
 }
