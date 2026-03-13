@@ -184,4 +184,13 @@ export class Day implements OnInit {
     section.data[index].value = '';
     this.saveSection(section);
   }
-}
+
+  clear() {
+    localStorage.removeItem("weekdays_normal");
+    localStorage.removeItem("weekend_normal");
+    localStorage.removeItem("weekdays_night_shift");
+    localStorage.removeItem("weekend_night_shift");
+
+    window.location.reload();
+  }
+} 
