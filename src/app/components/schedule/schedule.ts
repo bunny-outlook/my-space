@@ -15,6 +15,7 @@ export class Schedule implements OnInit {
   loading = signal<boolean>(true);
   error = signal<string | null>(null);
   daysRemaining: string = '';
+  daysRemainingForS26Ultra: string = '';
 
   objectKeys = Object.keys;
 
@@ -37,9 +38,10 @@ export class Schedule implements OnInit {
   ngOnInit() {
     this.fetchData();
     this.setDaysRemaining(new Date('2066-12-31'));
+    this.setDaysRemainingForS26Ultra(new Date('2026-11-06'));
   }
 
-  setDaysRemaining(targetDate: Date): void {
+  calcuateDaysRemaining(targetDate: Date): string {
     const today = new Date();
 
     today.setHours(0, 0, 0, 0);
@@ -48,7 +50,15 @@ export class Schedule implements OnInit {
     const diffInMs = targetDate.getTime() - today.getTime();
     const diffInDays = Math.max(0, Math.ceil(diffInMs / (1000 * 60 * 60 * 24)));
 
-    this.daysRemaining = diffInDays.toString();
+    return diffInDays.toString();
+  }
+
+  setDaysRemaining(targetDate: Date): void {
+    this.daysRemaining = this.calcuateDaysRemaining(targetDate);
+  }
+
+  setDaysRemainingForS26Ultra(targetDate: Date): void {
+    this.daysRemainingForS26Ultra = this.calcuateDaysRemaining(targetDate);
   }
 
   async fetchData() {
