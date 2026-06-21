@@ -1,11 +1,12 @@
 import { Component, ChangeDetectionStrategy, signal, OnInit, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: 'schedule.html',
   styleUrls: ['schedule.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -16,7 +17,7 @@ export class Schedule implements OnInit {
   error = signal<string | null>(null);
   daysRemaining: string = '';
   daysRemainingForS26Ultra: string = '';
-
+  remainingHours: string = '';
   objectKeys = Object.keys;
 
   constructor(private router: Router) {
@@ -39,6 +40,16 @@ export class Schedule implements OnInit {
     this.fetchData();
     this.setDaysRemaining(new Date('2066-12-31'));
     this.setDaysRemainingForS26Ultra(new Date('2026-11-06'));
+    this.loadRemainingHours();
+  }
+
+  loadRemainingHours(): void {
+    const value = localStorage.getItem('remainingHours');
+    this.remainingHours = value ?? '';
+  }
+
+  saveRemainingHours(): void {
+    localStorage.setItem('remainingHours', this.remainingHours);
   }
 
   calcuateDaysRemaining(targetDate: Date): string {

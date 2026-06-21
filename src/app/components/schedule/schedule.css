@@ -4,3 +4,14 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.card {
+    background: #1a1a1a;
+}
+
+.form-control:focus {
+    background: #1a1a1a;
+    color: white;
+    border-color: #0dcaf0;
+    box-shadow: 0 0 0 0.2rem rgba(13, 202, 240, 0.25);
+}

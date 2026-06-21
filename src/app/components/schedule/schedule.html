@@ -66,4 +66,37 @@
         </div>
         }
     </main> -->
+
+    <!-- Remaining Hours -->
+    <div class="card bg-dark border border-secondary shadow-sm mb-4">
+        <div class="card-body">
+            <label class="form-label fw-bold text-info">
+                Remaining hours:
+            </label>
+
+            <input type="text" class="form-control bg-dark text-light border-secondary" [(ngModel)]="remainingHours"
+                (ngModelChange)="saveRemainingHours()" placeholder="Enter remaining hours">
+        </div>
+    </div>
+
+    <!-- Schedule Content -->
+    @if (jsonData()) {
+    <div class="card bg-dark border border-secondary shadow-sm">
+        <div class="card-body">
+            <!-- <h5 class="text-gradient mb-3">Schedule</h5> -->
+
+            @for (key of objectKeys(jsonData()!); track key) {
+            <div class="mb-4">
+                <div class="fw-bold text-info mb-2">{{ key }}</div>
+
+                @for (item of jsonData()![key]; track item) {
+                <div class="text-light ps-2 mb-1">
+                    {{ item }}
+                </div>
+                }
+            </div>
+            }
+        </div>
+    </div>
+    }
 </div>
